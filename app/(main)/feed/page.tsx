@@ -108,7 +108,7 @@ export default function HiFeedPage() {
             <p className="text-text-secondary">콘텐츠를 불러오는 중...</p>
           </div>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 gap-3">
             {posts.map((post, index) => {
               if (posts.length === index + 1) {
                 return (

@@ -228,12 +228,6 @@ export default function GlobalCommunityPage() {
         )}
       </div>
 
-      {/* Floating Action Button */}
-      <Link href="/community/new">
-        <Button size="lg" className="fixed bottom-20 right-4 w-14 h-14 rounded-full shadow-lg z-50">
-          <Plus className="w-6 h-6" />
-        </Button>
-      </Link>
     </div>
   )
 }

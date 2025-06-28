@@ -37,52 +37,51 @@ export interface Comment {
   translatedContent?: string
 }
 
-// Mock data for community posts
-const mockCommunityPosts: CommunityPost[] = [
-  {
-    id: "1",
-    title: "한국 생활 초보자를 위한 은행 계좌 개설 가이드",
-    content:
-      "안녕하세요! 한국에 온 지 6개월 된 베트남 유학생입니다. 처음 은행 계좌를 개설할 때 많이 헤맸는데, 같은 상황에 있는 분들을 위해 제가 경험한 내용을 공유하려고 합니다.\n\n먼저 필요한 서류들:\n1. 외국인등록증 (가장 중요!)\n2. 여권\n3. 재학증명서 또는 재직증명서\n4. 한국 휴대폰 번호\n\n추천 은행:\n- 신한은행: 외국인 서비스가 잘 되어 있어요\n- 우리은행: 영어 서비스 제공\n- 국민은행: 지점이 많아서 편리해요\n\n팁: 한국어를 잘 못하시면 영어 가능한 직원이 있는 지점을 미리 전화로 확인하고 가세요!",
-    category: "생활정보",
-    community: "mytown",
+import { communityPosts } from '@/lib/data/mockData';
+
+// Transform community posts to match the expected format
+const transformCommunityPost = (post: any): CommunityPost => {
+  // Generate author info based on nationality
+  const nationalityMap: Record<string, string> = {
+    '미국': 'US',
+    '베트남': 'VN', 
+    '일본': 'JP',
+    '중국': 'CN',
+    '독일': 'DE',
+    '태국': 'TH',
+    '몽골': 'MN',
+    '프랑스': 'FR',
+    '영국': 'GB'
+  };
+  
+  const nationality = nationalityMap[post.country] || 'US';
+  const communityType = post.communityType === 'global' ? 'global' : 'mytown';
+  
+  return {
+    id: post.id,
+    title: post.title,
+    content: post.content,
+    category: post.subcategory,
+    community: communityType,
     author: {
-      id: "user1",
-      name: "Nguyen Minh",
-      avatar: "/placeholder.svg?height=40&width=40&text=NM",
-      nationality: "VN",
-      trustLevel: 4,
-      isVerified: true,
+      id: `user-${post.id}`,
+      name: post.author,
+      avatar: `/placeholder.svg?height=40&width=40&text=${post.author.substring(0, 2).toUpperCase()}`,
+      nationality,
+      trustLevel: Math.floor(Math.random() * 5) + 1,
+      isVerified: Math.random() > 0.5,
     },
-    images: ["/placeholder.svg?height=300&width=400&text=Bank+Guide"],
-    likes: 24,
-    comments: 8,
-    views: 156,
-    createdAt: "2024-01-15T10:30:00Z",
-    updatedAt: "2024-01-15T10:30:00Z",
-  },
-  {
-    id: "2",
-    title: "Looking for language exchange partners in Seoul!",
-    content:
-      "Hi everyone! I'm a German exchange student studying at Yonsei University. I'm looking for Korean friends who want to practice German or English in exchange for helping me with Korean.\n\nAbout me:\n- Native German speaker\n- Fluent in English\n- Beginner in Korean (but very motivated!)\n- Love hiking, photography, and trying new foods\n\nI'm free on weekends and some weekday evenings. We could meet at cafes in Hongdae or Gangnam area. Please message me if you're interested!",
-    category: "일반",
-    community: "global",
-    author: {
-      id: "user2",
-      name: "Max Weber",
-      avatar: "/placeholder.svg?height=40&width=40&text=MW",
-      nationality: "DE",
-      trustLevel: 3,
-      isVerified: false,
-    },
-    likes: 12,
-    comments: 15,
-    views: 89,
-    createdAt: "2024-01-14T15:45:00Z",
-    updatedAt: "2024-01-14T15:45:00Z",
-  },
-]
+    images: [],
+    likes: post.likes,
+    comments: post.comments,
+    views: post.views,
+    createdAt: post.createdAt,
+    updatedAt: post.updatedAt,
+  };
+};
+
+// Convert community posts to expected format
+const mockCommunityPosts: CommunityPost[] = communityPosts.map(transformCommunityPost)
 
 export async function getCommunityPosts(
   community: string,

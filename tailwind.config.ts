@@ -108,7 +108,6 @@ const config = {
   },
   plugins: [
     require("tailwindcss-animate"),
-    require("@tailwindcss/line-clamp"), // 이 부분을 추가했습니다.
   ],
 } satisfies Config
 

@@ -234,10 +234,12 @@ export default function LandingPage() {
         <div className="absolute top-20 left-10 w-20 h-20 bg-white/10 rounded-full blur-xl animate-pulse" />
         <div className="absolute top-40 right-20 w-32 h-32 bg-hiko-mint/20 rounded-full blur-2xl animate-pulse delay-1000" />
         <div className="absolute bottom-20 left-1/4 w-16 h-16 bg-purple-400/20 rounded-full blur-xl animate-pulse delay-500" />
+        <div className="absolute top-1/3 left-1/3 w-64 h-64 bg-white/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/3 right-1/3 w-48 h-48 bg-purple-300/10 rounded-full blur-2xl" />
 
         <div className="relative z-10 text-center text-white px-4 w-full max-w-6xl mx-auto">
           <AnimatedSection>
-            <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md rounded-full px-4 sm:px-6 py-2 sm:py-3 mb-6 sm:mb-8 border border-white/30 shadow-lg max-w-full">
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-xl rounded-full px-4 sm:px-6 py-2 sm:py-3 mb-6 sm:mb-8 border border-white/20 shadow-lg max-w-full">
               <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
               <span className="text-xs sm:text-sm font-medium text-center">15,000명이 선택한 한국 생활 플랫폼</span>
             </div>
@@ -258,29 +260,31 @@ export default function LandingPage() {
               <span className="text-hiko-mint font-semibold">이미 15,000명의 외국인이 함께하고 있어요!</span>
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-8 sm:mb-12 px-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 sm:mb-12 px-4">
               <Link href="/signup" className="w-full sm:w-auto">
                 <Button
                   size="lg"
-                  className="bg-white text-hiko-blue hover:bg-white/90 h-12 sm:h-14 md:h-16 px-6 sm:px-8 md:px-10 text-base sm:text-lg md:text-xl font-semibold group shadow-2xl w-full sm:w-auto"
+                  className="bg-white text-hiko-blue hover:bg-white/90 h-14 px-8 text-lg font-bold group shadow-2xl w-full sm:w-auto min-w-[200px] relative overflow-hidden"
                 >
-                  무료로 시작하기
-                  <ArrowRight className="ml-2 sm:ml-3 w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 group-hover:translate-x-1 transition-transform" />
+                  <span className="relative z-10">무료로 시작하기</span>
+                  <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform relative z-10" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-hiko-blue/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                 </Button>
               </Link>
-              <Button
-                variant="ghost"
-                size="lg"
-                className="text-white border-2 border-white/30 hover:bg-white/10 h-12 sm:h-14 md:h-16 px-6 sm:px-8 md:px-10 text-base sm:text-lg md:text-xl group w-full sm:w-auto"
-                onClick={handleComingSoon}
-              >
-                <Play className="mr-2 sm:mr-3 w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
-                소개 영상 보기
-              </Button>
+              <Link href="/login" className="w-full sm:w-auto">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="text-white border-2 border-white/50 hover:bg-white hover:text-hiko-blue h-14 px-8 text-lg font-medium w-full sm:w-auto min-w-[200px] backdrop-blur-sm transition-all duration-300 hover:shadow-lg"
+                >
+                  로그인
+                  <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-4">
-              <div className="flex items-center gap-2 bg-black/30 backdrop-blur-md rounded-lg px-3 sm:px-4 py-2 border border-white/20">
+              <div className="flex items-center gap-2 bg-black/20 backdrop-blur-xl rounded-lg px-3 sm:px-4 py-2 border border-white/30">
                 <Smartphone className="w-4 h-4 sm:w-5 sm:h-5" />
                 <span className="text-xs sm:text-sm">곧 출시 예정</span>
               </div>
@@ -322,7 +326,7 @@ export default function LandingPage() {
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
               {stats.map((stat, index) => (
                 <AnimatedSection key={index} delay={index * 100}>
-                  <div className="text-center bg-bg-primary rounded-xl sm:rounded-2xl p-4 sm:p-6 hover:shadow-strong transition-all h-full border border-border-secondary">
+                  <div className="text-center bg-white/80 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-6 hover:shadow-strong transition-all h-full border border-white/50">
                     <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-hiko-blue mb-1 sm:mb-2">
                       {stat.number}
                     </div>
@@ -398,7 +402,7 @@ export default function LandingPage() {
                   <div className="w-full lg:w-1/2">
                     <div className="relative max-w-lg mx-auto lg:max-w-none">
                       <div
-                        className={`absolute -inset-2 sm:-inset-4 md:-inset-6 lg:-inset-8 bg-gradient-to-r ${feature.gradient} opacity-20 rounded-2xl sm:rounded-3xl blur-2xl sm:blur-3xl transform rotate-6`}
+                        className={`absolute -inset-2 sm:-inset-4 md:-inset-6 lg:-inset-8 bg-gradient-to-r ${feature.gradient} opacity-30 rounded-2xl sm:rounded-3xl blur-2xl sm:blur-3xl transform rotate-6`}
                       ></div>
                       <Image
                         src={feature.image || "/placeholder.svg"}
@@ -432,7 +436,7 @@ export default function LandingPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {useCases.map((useCase, index) => (
               <AnimatedSection key={useCase.title} delay={index * 100}>
-                <Card className="p-4 sm:p-6 h-full hover:shadow-strong transition-all duration-300 border-border-secondary bg-bg-primary group hover:-translate-y-2">
+                <Card className="p-4 sm:p-6 h-full hover:shadow-strong transition-all duration-300 border-white/20 bg-white/70 backdrop-blur-sm group hover:-translate-y-2">
                   <div className="text-center">
                     <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">{useCase.icon}</div>
                     <h3 className="text-lg sm:text-xl font-bold text-text-primary mb-2">{useCase.title}</h3>
@@ -473,7 +477,7 @@ export default function LandingPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12">
               {howItWorks.map((step, index) => (
                 <AnimatedSection key={step.step} delay={index * 150}>
-                  <div className="bg-bg-secondary/60 backdrop-blur-md p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl border border-border-secondary shadow-subtle hover:shadow-strong transition-shadow h-full">
+                  <div className="bg-white/60 backdrop-blur-lg p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl border border-white/30 shadow-subtle hover:shadow-strong transition-shadow h-full">
                     <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
                       <div className="flex-shrink-0 self-start">
                         <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-gradient-to-r from-hiko-blue to-hiko-mint rounded-xl sm:rounded-2xl flex items-center justify-center text-white text-lg sm:text-xl font-bold">
@@ -515,7 +519,7 @@ export default function LandingPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {testimonials.map((testimonial, index) => (
               <AnimatedSection key={testimonial.name} delay={index * 150}>
-                <Card className="p-6 sm:p-8 h-full bg-bg-primary/60 backdrop-blur-lg border border-border-secondary shadow-strong hover:shadow-2xl transition-all duration-300">
+                <Card className="p-6 sm:p-8 h-full bg-white/40 backdrop-blur-xl border border-white/30 shadow-strong hover:shadow-2xl transition-all duration-300">
                   <div className="relative">
                     <div className="flex items-center gap-1 mb-3 sm:mb-4">
                       {[...Array(testimonial.rating)].map((_, i) => (
@@ -585,7 +589,7 @@ export default function LandingPage() {
             {blogPosts.slice(0, 3).map((post, index) => (
               <AnimatedSection key={post.title} delay={index * 100}>
                 <Link href={`/posts/${post.id}`} className="h-full">
-                  <Card className="overflow-hidden border-border-secondary shadow-subtle hover:shadow-strong transition-all duration-300 group h-full flex flex-col">
+                  <Card className="overflow-hidden border-white/20 bg-white/80 backdrop-blur-sm shadow-subtle hover:shadow-strong transition-all duration-300 group h-full flex flex-col">
                     <div className="relative overflow-hidden">
                       <Image
                         src={post.image || "/placeholder.svg"}
@@ -656,7 +660,7 @@ export default function LandingPage() {
           <div className="max-w-4xl mx-auto space-y-4 sm:space-y-6">
             {faq.slice(0, 4).map((item, index) => (
               <AnimatedSection key={index} delay={index * 100}>
-                <Card className="p-4 sm:p-6 bg-bg-primary/70 backdrop-blur-lg border border-border-secondary shadow-subtle hover:shadow-strong transition-all">
+                <Card className="p-4 sm:p-6 bg-white/50 backdrop-blur-xl border border-white/30 shadow-subtle hover:shadow-strong transition-all">
                   <h3 className="text-sm sm:text-base md:text-lg font-bold text-text-primary mb-2 sm:mb-3">
                     {item.question}
                   </h3>
@@ -686,6 +690,8 @@ export default function LandingPage() {
         <div className="absolute inset-0 bg-black/10" />
         <div className="absolute top-10 left-10 w-32 h-32 bg-white/10 rounded-full blur-2xl animate-pulse" />
         <div className="absolute bottom-10 right-10 w-24 h-24 bg-hiko-mint/20 rounded-full blur-xl animate-pulse delay-1000" />
+        <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-white/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 right-1/3 w-48 h-48 bg-purple-300/10 rounded-full blur-2xl" />
         <div className="container mx-auto px-4 text-center relative z-10">
           <AnimatedSection>
             <div className="max-w-4xl mx-auto">
@@ -714,7 +720,7 @@ export default function LandingPage() {
                   <Button
                     variant="ghost"
                     size="lg"
-                    className="text-white border-2 border-white/30 hover:bg-white/10 h-12 sm:h-14 md:h-16 px-6 sm:px-8 md:px-10 text-base sm:text-lg md:text-xl w-full sm:w-auto"
+                    className="text-white border-2 border-white/20 bg-white/10 backdrop-blur-sm hover:bg-white/20 h-12 sm:h-14 md:h-16 px-6 sm:px-8 md:px-10 text-base sm:text-lg md:text-xl w-full sm:w-auto"
                   >
                     이미 계정이 있나요?
                   </Button>

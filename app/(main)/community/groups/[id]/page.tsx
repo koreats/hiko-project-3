@@ -12,7 +12,6 @@ import {
   Bell,
   MessageSquare,
   Camera,
-  Plus,
   ChevronRight,
   Settings,
   UserMinus,
@@ -529,18 +528,6 @@ export default function GroupHomePage() {
         </Tabs>
       </div>
 
-      {/* Floating Action Button (Members Only) */}
-      {group.userRole !== "none" && (
-        <div className="fixed bottom-6 right-6 z-50">
-          <Button
-            size="lg"
-            className="rounded-full w-14 h-14 bg-hiko-blue hover:bg-hiko-blue/90 shadow-lg"
-            onClick={() => router.push(`/community/groups/${groupId}/new-post`)}
-          >
-            <Plus className="w-6 h-6" />
-          </Button>
-        </div>
-      )}
 
       {/* Leave Group Dialog */}
       <AlertDialog open={showLeaveDialog} onOpenChange={setShowLeaveDialog}>

@@ -25,12 +25,12 @@ type MarketItem = {
 export function MarketItemCard({ item }: { item: MarketItem }) {
   return (
     <Link href={`/market/${item.id}`}>
-      <Card className="overflow-hidden hover:shadow-lg transition-shadow cursor-pointer">
-        <div className="relative w-full aspect-square">
-          <Image src={item.image || "/placeholder.svg"} alt={item.title} fill className="object-cover" />
+      <Card className="overflow-hidden hover:shadow-lg transition-shadow cursor-pointer flex">
+        <div className="relative w-24 h-20 flex-shrink-0">
+          <Image src={item.image || "/placeholder.svg"} alt={item.title} fill className="object-cover rounded-l-lg" />
           {item.status && (
             <div
-              className={`absolute top-2 left-2 px-2 py-1 rounded text-xs font-medium text-white ${
+              className={`absolute top-1 left-1 px-1 py-0.5 rounded text-xs font-medium text-white ${
                 item.status === "예약중" ? "bg-orange-500" : "bg-gray-500"
               }`}
             >
@@ -38,12 +38,12 @@ export function MarketItemCard({ item }: { item: MarketItem }) {
             </div>
           )}
         </div>
-        <CardContent className="p-3">
+        <CardContent className="p-2 flex-grow min-w-0">
           <h3 className="font-semibold text-sm text-text-primary line-clamp-2 mb-1 leading-tight">{item.title}</h3>
-          <p className="font-bold text-lg text-text-primary mb-2">{item.price}</p>
+          <p className="font-bold text-base text-text-primary mb-1">{item.price}</p>
 
-          <div className="flex items-center space-x-2 mb-2">
-            <div className="relative w-4 h-4">
+          <div className="flex items-center space-x-1 mb-1">
+            <div className="relative w-3 h-3">
               <Image
                 src={item.seller.avatar || "/placeholder.svg"}
                 alt={item.seller.name}
@@ -55,28 +55,20 @@ export function MarketItemCard({ item }: { item: MarketItem }) {
             {item.seller.verified && <CheckCircle className="w-3 h-3 text-hiko-mint flex-shrink-0" />}
           </div>
 
-          <p className="text-xs text-text-secondary mb-2">{item.location}</p>
+          <p className="text-xs text-text-secondary mb-1 truncate">{item.location}</p>
 
-          <div className="flex items-center justify-between text-xs text-text-secondary mb-3">
-            <div className="flex items-center space-x-3">
-              <span className="flex items-center space-x-1">
+          <div className="flex items-center justify-between text-xs text-text-secondary">
+            <div className="flex items-center space-x-2">
+              <span className="flex items-center space-x-0.5">
                 <Heart className="w-3 h-3" />
                 <span>{item.likes}</span>
               </span>
-              <span className="flex items-center space-x-1">
+              <span className="flex items-center space-x-0.5">
                 <MessageCircle className="w-3 h-3" />
                 <span>{item.comments}</span>
               </span>
             </div>
-            <span>{item.time}</span>
-          </div>
-
-          <div className="flex items-center space-x-1 overflow-x-auto no-scrollbar">
-            {item.tags.map((tag) => (
-              <Tag key={tag} className="text-xs whitespace-nowrap bg-gray-100 text-gray-600">
-                {tag}
-              </Tag>
-            ))}
+            <span className="truncate">{item.time}</span>
           </div>
         </CardContent>
       </Card>

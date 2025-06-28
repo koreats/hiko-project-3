@@ -304,16 +304,6 @@ export default function GroupsPage() {
         )}
       </div>
 
-      {/* Floating Action Button (for eligible users) */}
-      {userLevel >= 20 && (
-        <Button
-          onClick={handleCreateGroup}
-          className="fixed bottom-20 right-4 w-14 h-14 rounded-full bg-hiko-blue hover:bg-hiko-blue/90 shadow-lg"
-          size="icon"
-        >
-          <Plus className="w-6 h-6" />
-        </Button>
-      )}
     </div>
   )
 }

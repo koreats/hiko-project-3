@@ -452,21 +452,12 @@ export default function MarketPage() {
       </div>
 
       {/* Items Grid */}
-      <div className="p-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 bg-main-bg pb-20">
+      <div className="p-4 grid grid-cols-1 gap-3 bg-main-bg pb-20">
         {marketItems.map((item) => (
           <MarketItemCard key={item.id} item={item} />
         ))}
       </div>
 
-      {/* Floating Action Button */}
-      <Link href="/market/new">
-        <Button
-          size="lg"
-          className="fixed bottom-20 right-4 w-14 h-14 rounded-full shadow-lg hover:shadow-xl transition-shadow z-40"
-        >
-          <Plus className="w-6 h-6" />
-        </Button>
-      </Link>
 
       {/* Modals */}
       <FilterModal

@@ -1,0 +1,354 @@
+
+> my-v0-project@0.1.0 dev
+> next dev
+
+   ▲ Next.js 15.2.4
+   - Local:        http://localhost:3000
+   - Network:      http://10.255.255.254:3000
+
+ ✓ Starting...
+ ✓ Ready in 16.7s
+ ○ Compiling /middleware ...
+ ✓ Compiled /middleware in 877ms (101 modules)
+ ○ Compiling /feed/[id] ...
+ ✓ Compiled /feed/[id] in 14s (895 modules)
+ ✓ Compiled in 1929ms (394 modules)
+ ✓ Compiled in 1040ms (394 modules)
+ ✓ Compiled in 1054ms (394 modules)
+ ✓ Compiled in 1065ms (394 modules)
+ ✓ Compiled in 1024ms (394 modules)
+ ✓ Compiled in 1009ms (394 modules)
+Error: Route "/feed/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at FeedDetailPage (app/(main)/feed/[id]/page.tsx:44:13)
+  42 |
+  43 |     fetchData()
+> 44 |   }, [params.id])
+     |             ^
+  45 |
+  46 |   const handleLikeToggle = () => {
+  47 |     setIsLiked(!isLiked)
+ GET /feed/hi-feed-1-page-1-0 200 in 22522ms
+ ✓ Compiled in 1333ms (394 modules)
+ ✓ Compiled in 1024ms (394 modules)
+ ✓ Compiled in 963ms (394 modules)
+ ✓ Compiled in 998ms (394 modules)
+ ✓ Compiled in 1001ms (394 modules)
+ ✓ Compiled in 993ms (394 modules)
+ ✓ Compiled in 1023ms (394 modules)
+ ✓ Compiled in 1030ms (394 modules)
+ ✓ Compiled in 1082ms (394 modules)
+ ✓ Compiled in 1037ms (394 modules)
+ ✓ Compiled in 1059ms (394 modules)
+ ✓ Compiled in 1007ms (394 modules)
+ ✓ Compiled in 1020ms (394 modules)
+ ✓ Compiled in 995ms (394 modules)
+ ✓ Compiled in 973ms (394 modules)
+ ✓ Compiled in 1017ms (394 modules)
+ ✓ Compiled in 1002ms (394 modules)
+ ✓ Compiled in 989ms (394 modules)
+ ✓ Compiled in 958ms (394 modules)
+ ✓ Compiled in 993ms (394 modules)
+ ✓ Compiled in 1032ms (394 modules)
+ ✓ Compiled in 963ms (394 modules)
+ ✓ Compiled in 944ms (394 modules)
+ ✓ Compiled in 940ms (394 modules)
+ ✓ Compiled in 923ms (394 modules)
+ ✓ Compiled in 931ms (394 modules)
+ ✓ Compiled in 935ms (394 modules)
+ ✓ Compiled in 956ms (394 modules)
+ ✓ Compiled in 955ms (394 modules)
+ ✓ Compiled in 956ms (394 modules)
+ ✓ Compiled in 946ms (394 modules)
+ ✓ Compiled in 969ms (394 modules)
+ ✓ Compiled in 953ms (394 modules)
+ ✓ Compiled in 968ms (394 modules)
+ ✓ Compiled in 960ms (394 modules)
+ ✓ Compiled in 944ms (394 modules)
+ ✓ Compiled in 948ms (394 modules)
+ ✓ Compiled in 933ms (394 modules)
+ ✓ Compiled in 970ms (394 modules)
+ ✓ Compiled in 918ms (394 modules)
+ ✓ Compiled in 1048ms (394 modules)
+ ✓ Compiled in 1020ms (394 modules)
+ ✓ Compiled in 945ms (394 modules)
+ ✓ Compiled in 979ms (394 modules)
+ ✓ Compiled in 968ms (394 modules)
+ ✓ Compiled in 958ms (394 modules)
+ ✓ Compiled in 1000ms (394 modules)
+ ✓ Compiled in 1007ms (394 modules)
+ ✓ Compiled in 993ms (394 modules)
+ ✓ Compiled in 1002ms (394 modules)
+ ✓ Compiled in 988ms (394 modules)
+ ✓ Compiled in 1025ms (394 modules)
+ ✓ Compiled in 975ms (394 modules)
+ ✓ Compiled in 1016ms (394 modules)
+ ✓ Compiled in 1036ms (394 modules)
+ ✓ Compiled in 1000ms (394 modules)
+ ✓ Compiled in 1030ms (394 modules)
+ ✓ Compiled in 1027ms (394 modules)
+ ✓ Compiled in 998ms (394 modules)
+ ✓ Compiled in 983ms (394 modules)
+ ✓ Compiled in 976ms (394 modules)
+ ✓ Compiled in 972ms (394 modules)
+ ✓ Compiled in 983ms (394 modules)
+ ✓ Compiled in 963ms (394 modules)
+ ✓ Compiled in 964ms (394 modules)
+ ✓ Compiled in 974ms (394 modules)
+ ✓ Compiled in 945ms (394 modules)
+ ✓ Compiled in 978ms (394 modules)
+ ✓ Compiled in 993ms (394 modules)
+ ✓ Compiled in 1108ms (394 modules)
+ ✓ Compiled in 1008ms (394 modules)
+ ✓ Compiled in 1038ms (394 modules)
+ ✓ Compiled in 1022ms (394 modules)
+ ✓ Compiled in 1036ms (394 modules)
+ ✓ Compiled in 1223ms (394 modules)
+ ✓ Compiled in 1006ms (394 modules)
+ ✓ Compiled in 944ms (394 modules)
+ ✓ Compiled in 939ms (394 modules)
+ ✓ Compiled in 928ms (394 modules)
+ ✓ Compiled in 974ms (394 modules)
+ ✓ Compiled in 959ms (394 modules)
+ ✓ Compiled in 934ms (394 modules)
+ ✓ Compiled in 942ms (394 modules)
+ ✓ Compiled in 972ms (394 modules)
+ ✓ Compiled in 970ms (394 modules)
+ ✓ Compiled in 960ms (394 modules)
+ ✓ Compiled in 931ms (394 modules)
+ ✓ Compiled in 992ms (394 modules)
+ ✓ Compiled in 974ms (394 modules)
+ ✓ Compiled in 957ms (394 modules)
+ ✓ Compiled in 941ms (394 modules)
+ ✓ Compiled in 946ms (394 modules)
+ ✓ Compiled in 1012ms (394 modules)
+ ✓ Compiled in 957ms (394 modules)
+ ✓ Compiled in 980ms (394 modules)
+ ✓ Compiled in 956ms (394 modules)
+ ✓ Compiled in 977ms (394 modules)
+ ✓ Compiled in 969ms (394 modules)
+ ✓ Compiled in 963ms (394 modules)
+ ✓ Compiled in 953ms (394 modules)
+ ✓ Compiled in 997ms (394 modules)
+ ✓ Compiled in 958ms (394 modules)
+ ✓ Compiled in 970ms (394 modules)
+ ✓ Compiled in 963ms (394 modules)
+ ✓ Compiled in 976ms (394 modules)
+ ✓ Compiled in 1022ms (394 modules)
+ ✓ Compiled in 1029ms (394 modules)
+ ✓ Compiled in 1040ms (394 modules)
+ ✓ Compiled in 1075ms (394 modules)
+ ✓ Compiled in 1004ms (394 modules)
+ ✓ Compiled in 975ms (394 modules)
+ ✓ Compiled in 958ms (394 modules)
+ ✓ Compiled in 951ms (394 modules)
+ ✓ Compiled in 943ms (394 modules)
+ ✓ Compiled in 915ms (394 modules)
+ ✓ Compiled in 894ms (394 modules)
+ ✓ Compiled in 881ms (394 modules)
+ ✓ Compiled in 915ms (394 modules)
+ ✓ Compiled in 905ms (394 modules)
+ ✓ Compiled in 911ms (394 modules)
+ ✓ Compiled in 929ms (394 modules)
+ ✓ Compiled in 908ms (394 modules)
+ ✓ Compiled in 918ms (394 modules)
+ ✓ Compiled in 927ms (394 modules)
+ ✓ Compiled in 929ms (394 modules)
+ ✓ Compiled in 952ms (394 modules)
+ ✓ Compiled in 897ms (394 modules)
+ ✓ Compiled in 917ms (394 modules)
+ ✓ Compiled in 903ms (394 modules)
+ ✓ Compiled in 900ms (394 modules)
+ ✓ Compiled in 901ms (394 modules)
+ ✓ Compiled in 927ms (394 modules)
+ ✓ Compiled in 928ms (394 modules)
+ ✓ Compiled in 901ms (394 modules)
+ ✓ Compiled in 917ms (394 modules)
+ ✓ Compiled in 880ms (394 modules)
+ ✓ Compiled in 938ms (394 modules)
+ ✓ Compiled in 913ms (394 modules)
+ ✓ Compiled in 965ms (394 modules)
+ ✓ Compiled in 1033ms (394 modules)
+ ✓ Compiled in 992ms (394 modules)
+ ✓ Compiled in 1004ms (394 modules)
+ ✓ Compiled in 922ms (394 modules)
+ ✓ Compiled in 893ms (394 modules)
+ ✓ Compiled in 1030ms (394 modules)
+ ✓ Compiled in 1015ms (394 modules)
+ ✓ Compiled in 1050ms (394 modules)
+ ✓ Compiled in 984ms (394 modules)
+ ✓ Compiled in 1088ms (394 modules)
+ ✓ Compiled in 1037ms (394 modules)
+ ✓ Compiled in 1176ms (394 modules)
+ GET /feed/hi-feed-4-page-3-0 200 in 2228ms
+ ✓ Compiled in 1208ms (394 modules)
+ ✓ Compiled in 1246ms (394 modules)
+ GET /feed/hi-feed-4-page-3-0 200 in 2406ms
+ ✓ Compiled in 1234ms (394 modules)
+ ✓ Compiled in 1228ms (394 modules)
+Error: Route "/feed/[id]" used `params.id`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at FeedDetailPage (app/(main)/feed/[id]/page.tsx:44:13)
+  42 |
+  43 |     fetchData()
+> 44 |   }, [params.id])
+     |             ^
+  45 |
+  46 |   const handleLikeToggle = () => {
+  47 |     setIsLiked(!isLiked)
+ GET /feed/hi-feed-4-page-3-0 200 in 2331ms
+ ✓ Compiled in 1212ms (394 modules)
+ GET /feed/hi-feed-4-page-3-0 200 in 2622ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 2.9s (890 modules)
+ GET /.well-known/appspecific/com.chrome.devtools.json 404 in 3315ms
+ ✓ Compiled in 1577ms (397 modules)
+ ✓ Compiled in 1271ms (397 modules)
+ ✓ Compiled in 1064ms (397 modules)
+ GET /feed/hi-feed-4-page-3-0 200 in 2400ms
+ ✓ Compiled in 1176ms (397 modules)
+ ✓ Compiled in 1261ms (397 modules)
+ ✓ Compiled in 1318ms (397 modules)
+ GET /feed/hi-feed-4-page-3-0 200 in 2582ms
+ ✓ Compiled in 1199ms (397 modules)
+ ✓ Compiled in 1292ms (397 modules)
+ GET /feed/hi-feed-4-page-3-0 200 in 2586ms
+ ✓ Compiled in 1304ms (397 modules)
+ ✓ Compiled in 1135ms (397 modules)
+ ✓ Compiled in 894ms (397 modules)
+ GET /feed/hi-feed-4-page-3-0 200 in 1876ms
+ ✓ Compiled in 953ms (397 modules)
+ ✓ Compiled in 1092ms (397 modules)
+ ✓ Compiled in 1106ms (397 modules)
+ GET /feed/hi-feed-4-page-3-0 200 in 2213ms
+ ✓ Compiled in 1065ms (397 modules)
+ ✓ Compiled in 1058ms (397 modules)
+ GET /feed/hi-feed-4-page-3-0 200 in 2160ms
+ ✓ Compiled in 1155ms (397 modules)
+ ✓ Compiled in 1050ms (397 modules)
+ ✓ Compiled in 933ms (397 modules)
+ GET /feed/hi-feed-4-page-3-0 200 in 2891ms
+ ✓ Compiled in 1055ms (397 modules)
+ ✓ Compiled in 1097ms (397 modules)
+ ✓ Compiled in 1082ms (397 modules)
+ GET /feed/hi-feed-4-page-3-0 200 in 2202ms
+ ✓ Compiled in 1040ms (397 modules)
+ ✓ Compiled in 1088ms (397 modules)
+ ✓ Compiled in 1068ms (397 modules)
+ GET /feed/hi-feed-4-page-3-0 200 in 2128ms
+ ✓ Compiled in 975ms (397 modules)
+ ✓ Compiled in 969ms (397 modules)
+ GET /feed/hi-feed-4-page-3-0 200 in 1982ms
+ ✓ Compiled in 1004ms (397 modules)
+ ✓ Compiled in 1043ms (397 modules)
+ ✓ Compiled in 1110ms (397 modules)
+ GET /feed/hi-feed-4-page-3-0 200 in 2144ms
+ ✓ Compiled in 1069ms (397 modules)
+ ✓ Compiled in 1069ms (397 modules)
+ ⨯ SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>) {
+  page: '/feed/hi-feed-4-page-3-0'
+}
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 4.1s (1219 modules)
+ GET /feed/hi-feed-4-page-3-0 500 in 15484ms
+ ✓ Compiled in 10.1s (639 modules)
+ ✓ Compiled in 1079ms (639 modules)
+ ⨯ SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>) {
+  page: '/feed/hi-feed-4-page-3-0'
+}
+ ✓ Compiled in 2.5s (1219 modules)
+ ⨯ [Error: ENOENT: no such file or directory, open '/mnt/c/Users/blues/Desktop/hikofr/hiko-project-3/.next/server/pages/_document.js'] {
+  errno: -2,
+  syscall: 'open',
+  code: 'ENOENT',
+  path: '/mnt/c/Users/blues/Desktop/hikofr/hiko-project-3/.next/server/pages/_document.js'
+}
+ ✓ Compiled in 1091ms (639 modules)
+ ✓ Compiled in 1994ms (639 modules)
+ ✓ Compiled in 1855ms (639 modules)
+ ✓ Compiled in 1946ms (1205 modules)
+ GET /feed/hi-feed-4-page-3-0 500 in 12276ms
+ ✓ Compiled in 1532ms (636 modules)
+ ✓ Compiled in 1115ms (636 modules)
+ ⨯ [Error: ENOENT: no such file or directory, open '/mnt/c/Users/blues/Desktop/hikofr/hiko-project-3/.next/server/app/(main)/feed/[id]/page.js'] {
+  errno: -2,
+  syscall: 'open',
+  code: 'ENOENT',
+  path: '/mnt/c/Users/blues/Desktop/hikofr/hiko-project-3/.next/server/app/(main)/feed/[id]/page.js',
+  page: '/feed/hi-feed-4-page-3-0'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/mnt/c/Users/blues/Desktop/hikofr/hiko-project-3/.next/server/pages/_document.js'] {
+  errno: -2,
+  syscall: 'open',
+  code: 'ENOENT',
+  path: '/mnt/c/Users/blues/Desktop/hikofr/hiko-project-3/.next/server/pages/_document.js'
+}
+ GET /feed/hi-feed-4-page-3-0 500 in 1763ms
+ ✓ Compiled in 1097ms (636 modules)
+ ✓ Compiled in 953ms (636 modules)
+ ⨯ [Error: ENOENT: no such file or directory, open '/mnt/c/Users/blues/Desktop/hikofr/hiko-project-3/.next/server/app/(main)/feed/[id]/page.js'] {
+  errno: -2,
+  syscall: 'open',
+  code: 'ENOENT',
+  path: '/mnt/c/Users/blues/Desktop/hikofr/hiko-project-3/.next/server/app/(main)/feed/[id]/page.js',
+  page: '/feed/hi-feed-4-page-3-0'
+}
+ ✓ Compiled in 2.3s (1215 modules)
+ ⨯ [Error: ENOENT: no such file or directory, open '/mnt/c/Users/blues/Desktop/hikofr/hiko-project-3/.next/server/pages/_document.js'] {
+  errno: -2,
+  syscall: 'open',
+  code: 'ENOENT',
+  path: '/mnt/c/Users/blues/Desktop/hikofr/hiko-project-3/.next/server/pages/_document.js'
+}
+ GET /feed/hi-feed-4-page-3-0 500 in 3317ms
+ ✓ Compiled in 1019ms (636 modules)
+ ✓ Compiled in 872ms (636 modules)
+ GET /feed/hi-feed-4-page-3-0 200 in 1955ms
+ ✓ Compiled in 1087ms (636 modules)
+ ✓ Compiled in 1242ms (636 modules)
+ ⨯ [Error: ENOENT: no such file or directory, open '/mnt/c/Users/blues/Desktop/hikofr/hiko-project-3/.next/server/app-paths-manifest.json'] {
+  errno: -2,
+  syscall: 'open',
+  code: 'ENOENT',
+  path: '/mnt/c/Users/blues/Desktop/hikofr/hiko-project-3/.next/server/app-paths-manifest.json',
+  page: '/feed/hi-feed-4-page-3-0'
+}
+ ✓ Compiled in 2.2s (1215 modules)
+ ⨯ [Error: ENOENT: no such file or directory, open '/mnt/c/Users/blues/Desktop/hikofr/hiko-project-3/.next/server/pages/_document.js'] {
+  errno: -2,
+  syscall: 'open',
+  code: 'ENOENT',
+  path: '/mnt/c/Users/blues/Desktop/hikofr/hiko-project-3/.next/server/pages/_document.js'
+}
+ GET /feed/hi-feed-4-page-3-0 500 in 3452ms
+ ✓ Compiled in 1114ms (636 modules)
+ ✓ Compiled in 946ms (636 modules)
+ ⨯ Failed to generate static paths for /feed/[id]:
+[Error: Cannot find module '/mnt/c/Users/blues/Desktop/hikofr/hiko-project-3/.next/server/app/(main)/feed/[id]/page.js'
+Require stack:
+- /mnt/c/Users/blues/Desktop/hikofr/hiko-project-3/node_modules/next/dist/server/require.js
+- /mnt/c/Users/blues/Desktop/hikofr/hiko-project-3/node_modules/next/dist/server/load-components.js
+- /mnt/c/Users/blues/Desktop/hikofr/hiko-project-3/node_modules/next/dist/build/utils.js
+- /mnt/c/Users/blues/Desktop/hikofr/hiko-project-3/node_modules/next/dist/server/dev/static-paths-worker.js
+- /mnt/c/Users/blues/Desktop/hikofr/hiko-project-3/node_modules/next/dist/compiled/jest-worker/processChild.js] {
+  type: 'Error',
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/mnt/c/Users/blues/Desktop/hikofr/hiko-project-3/.next/server/app/(main)/feed/[id]/page.js'] {
+  errno: -2,
+  syscall: 'open',
+  code: 'ENOENT',
+  path: '/mnt/c/Users/blues/Desktop/hikofr/hiko-project-3/.next/server/app/(main)/feed/[id]/page.js',
+  page: '/feed/hi-feed-4-page-3-0'
+}
+ ✓ Compiled in 2.3s (1215 modules)
+ ⨯ [Error: ENOENT: no such file or directory, open '/mnt/c/Users/blues/Desktop/hikofr/hiko-project-3/.next/server/pages/_document.js'] {
+  errno: -2,
+  syscall: 'open',
+  code: 'ENOENT',
+  path: '/mnt/c/Users/blues/Desktop/hikofr/hiko-project-3/.next/server/pages/_document.js'
+}
+ GET /feed/hi-feed-4-page-3-0 500 in 3332ms
+ ✓ Compiled in 1000ms (636 modules)
+[?25h

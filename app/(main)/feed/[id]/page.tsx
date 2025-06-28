@@ -13,7 +13,7 @@ import { Tag } from "@/components/ui/tag"
 import { ArrowLeft, Heart, Share2, Globe, ExternalLink, Eye, MessageSquare, Lightbulb } from "lucide-react"
 import { cn } from "@/lib/utils"
 
-export default function FeedDetailPage({ params }: { params: { id: string } }) {
+export default function FeedDetailPage({ params }: { params: Promise<{ id: string }> }) {
   const router = useRouter()
   const [item, setItem] = useState<FeedItem | null>(null)
   const [comments, setComments] = useState<any[]>([])
@@ -26,7 +26,8 @@ export default function FeedDetailPage({ params }: { params: { id: string } }) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const [itemData, commentsData] = await Promise.all([getFeedItemById(params.id), getComments(params.id)])
+        const resolvedParams = await params
+        const [itemData, commentsData] = await Promise.all([getFeedItemById(resolvedParams.id), getComments(resolvedParams.id)])
 
         if (itemData) {
           setItem(itemData)
@@ -41,7 +42,7 @@ export default function FeedDetailPage({ params }: { params: { id: string } }) {
     }
 
     fetchData()
-  }, [params.id])
+  }, [params])
 
   const handleLikeToggle = () => {
     setIsLiked(!isLiked)
@@ -50,7 +51,8 @@ export default function FeedDetailPage({ params }: { params: { id: string } }) {
 
   const handleCommentAdd = async (content: string) => {
     try {
-      const newComment = await addComment(params.id, content)
+      const resolvedParams = await params
+      const newComment = await addComment(resolvedParams.id, content)
       setComments((prev) => [newComment, ...prev])
     } catch (error) {
       console.error("Failed to add comment:", error)
